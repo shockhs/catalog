@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  width: 100%;
   display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 10px;
+}
+
+.numbers {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.imageField {
+  display: flex;
+  padding: 10px 0;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+  width: 380px;
+  height: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.firstRow {
+  display: flex;
+}
+
+@media only screen and (min-width: 1640px) {
+  .images-container {
+    grid-template-columns: repeat(4, 400px);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (min-width: 1240px) and (max-width: 1640px) {
+  .images-container {
+    grid-template-columns: repeat(3, 400px);
+  }
+}
+
+@media only screen and (min-width: 840px) and (max-width: 1240px) {
+  .images-container {
+    grid-template-columns: repeat(2, 400px);
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .images-container {
+    grid-template-columns: 400px;
   }
 }
