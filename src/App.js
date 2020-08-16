@@ -4,21 +4,19 @@ import './App.css';
 function App() {
   return (
     <div className="container">
+      <h1>Каталог</h1>
       <div className="images-container">
         <div className="imageField">
-          <div>
+          <div className="smallImages">
             <img
-              style={{ width: 126 }}
               src="https://i.ibb.co/8BxzF90/1.jpg"
               alt="1"
             />
             <img
-              style={{ width: 126 }}
               src="https://i.ibb.co/XZ6wHFv/2.jpg"
               alt="2"
             />
             <img
-              style={{ width: 126 }}
               src="https://i.ibb.co/vBk6cCz/3.jpg"
               alt="3"
             />

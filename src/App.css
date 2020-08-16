@@ -37,8 +37,13 @@ body {
 .container {
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding: 50px 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.container h1 {
+  padding: 15px 0;
 }
 
 .images-container {
@@ -74,6 +79,10 @@ img {
   display: flex;
 }
 
+.smallImages img{
+  width: 126px;
+}
+
 @media only screen and (min-width: 1640px) {
   .images-container {
     grid-template-columns: repeat(4, 400px);
@@ -93,7 +102,19 @@ img {
 }
 
 @media only screen and (max-width: 840px) {
+  .container {
+    padding: 0 10px;
+  }
+  .smallImages img {
+    width: 120px;
+  }
+  img {
+    width: 350px;
+    height: 300px;
+  }
   .images-container {
-    grid-template-columns: 400px;
+    grid-template-columns: 370px;
   }
 }
+
+
